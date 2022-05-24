@@ -1,5 +1,6 @@
 package com.yyh.base.biz;
 
+import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description: BootstrapApplication.java
  */
 @SpringBootApplication(scanBasePackages = "com.yyh.base")
+@NacosPropertySource(dataId = "f9f183ff-76c8-4eae-bf80-2aba39f27edb", autoRefreshed = true)
 public class BootstrapApplication {
 
 	public static void main(String[] args) {

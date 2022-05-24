@@ -1,5 +1,36 @@
 spring:
   application:
-    name: base
-  profiles:
-    active: dev
+    name: auth
+  config:
+    activate:
+      on-profile: dev
+
+---
+#开发环境配置
+nacos:
+  config:
+    server-addr: yyh520.com:8848
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+---
+#测试环境配置
+nacos:
+  config:
+    server-addr: yyh520.com:8848
+spring:
+  config:
+    activate:
+      on-profile: test
+
+---
+#生产环境配置
+nacos:
+  config:
+    server-addr: yyh520.com:8848
+spring:
+  config:
+    activate:
+      on-profile: pord
