@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>app/biz/service/impl</module>
+		<module>app/biz/shared</module>
+		<module>app/bootstrap</module>
+		<module>app/common/dal</module>
+		<module>app/common/service/facade</module>
+		<module>app/common/service/ingegration</module>
+		<module>app/common/tracermonitor</module>
+		<module>app/common/util</module>
+		<module>app/core/model</module>
+		<module>app/core/service</module>
+		<module>app/core/tracerlimiter</module>
+		<module>app/test</module>
+		<module>app/web</module>
+	</modules>
 
 	<groupId>com.yyh.code</groupId>
 	<artifactId>base</artifactId>
@@ -18,6 +30,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<spring-boot.version>2.7.0</spring-boot.version>
 	</properties>
 
 	<dependencyManagement>
@@ -25,11 +38,17 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter</artifactId>
+				<version>${spring-boot.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-test</artifactId>
-				<scope>test</scope>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${spring-boot.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
