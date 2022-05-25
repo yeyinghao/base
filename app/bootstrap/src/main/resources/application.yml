@@ -1,21 +1,21 @@
+server:
+  port: 8081
 spring:
   application:
     name: auth
-  config:
-    activate:
-      on-profile: dev
+  profiles:
+    active: dev
 
 ---
 #开发环境配置
-#nacos:
-#  config:
-#    server-addr: yyh520.com:8848
-#  discovery:
-#    server-addr: yyh520.com:8848
-spring:
+nacos:
   config:
-    activate:
-      on-profile: dev
+    server-addr: yyh520.com:8848
+  discovery:
+    server-addr: yyh520.com:8848
+spring:
+  profiles:
+    active: dev
 
 ---
 #测试环境配置
@@ -25,9 +25,8 @@ nacos:
   discovery:
     server-addr: yyh520.com:8848
 spring:
-  config:
-    activate:
-      on-profile: test
+  profiles:
+    active: test
 
 ---
 #生产环境配置
@@ -37,6 +36,5 @@ nacos:
   discovery:
     server-addr: yyh520.com:8848
 spring:
-  config:
-    activate:
-      on-profile: pord
+  profiles:
+    active: prod

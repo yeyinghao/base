@@ -30,8 +30,8 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<spring-boot.version>2.0.3.RELEASE</spring-boot.version>
-		<nacos.version>0.2.10</nacos.version>
+		<spring-boot.version>2.2.7.RELEASE</spring-boot.version>
+		<nacos.version>0.2.9</nacos.version>
 	</properties>
 
 	<dependencyManagement>
