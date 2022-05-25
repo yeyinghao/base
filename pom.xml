@@ -12,7 +12,7 @@
 		<module>app/bootstrap</module>
 		<module>app/common/dal</module>
 		<module>app/common/service/facade</module>
-		<module>app/common/service/ingegration</module>
+		<module>app/common/service/integration</module>
 		<module>app/common/tracermonitor</module>
 		<module>app/common/util</module>
 		<module>app/core/model</module>

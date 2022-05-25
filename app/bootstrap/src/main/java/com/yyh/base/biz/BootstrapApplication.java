@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description: BootstrapApplication.java
  */
 @SpringBootApplication(scanBasePackages = "com.yyh.base")
-@NacosPropertySource(dataId = "base-application.yml", autoRefreshed = true)
+@NacosPropertySource(dataId = "base.yml", autoRefreshed = true)
 public class BootstrapApplication {
 
 	public static void main(String[] args) {
