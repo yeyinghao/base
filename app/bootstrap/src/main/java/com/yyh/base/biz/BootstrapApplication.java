@@ -20,12 +20,12 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 public class BootstrapApplication {
 
-	private static final Logger logger = LoggerFactory.getLogger(BootstrapApplication.class);
+	private static final Logger logger = LoggerFactory.getLogger("TARCERMONITOR");
 
 	public static void main(String[] args) {
 		try {
 			SpringApplication.run(BootstrapApplication.class, args);
-			logger.warn("启动成功");
+			logger.info("启动成功");
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
