@@ -1,6 +1,7 @@
 package com.yyh.base.biz;
 
 import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @description: BootstrapApplication.java
  */
 @ComponentScan(basePackages = "com.yyh.base")
+@MapperScan("com.yyh.base.dal.mapper")
 @NacosPropertySource(dataId = "base.yml", autoRefreshed = true)
 @SpringBootApplication
 public class BootstrapApplication {
