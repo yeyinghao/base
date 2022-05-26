@@ -13,8 +13,7 @@ nacos:
   discovery:
     server-addr: yyh520.com:8848
 spring:
-  profiles:
-    active: dev
+  profiles: dev
 
 ---
 #测试环境配置
@@ -25,8 +24,7 @@ nacos:
   discovery:
     server-addr: yyh520.com:8848
 spring:
-  profiles:
-    active: test
+  profiles: test
 
 ---
 #生产环境配置
@@ -37,5 +35,4 @@ nacos:
   discovery:
     server-addr: yyh520.com:8848
 spring:
-  profiles:
-    active: prod
+  profiles: prod
