@@ -1,4 +1,4 @@
-package com.yyh.base.biz.restapi;
+package com.yyh.base.web.restapi;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

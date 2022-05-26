@@ -1,9 +1,9 @@
-package com.yyh.base.biz.log;
+package com.yyh.base.bootstrap.log;
 
 import ch.qos.logback.classic.pattern.ClassicConverter;
 import ch.qos.logback.classic.spi.ILoggingEvent;
-import com.yyh.base.biz.LocalThreadContext;
-import com.yyh.base.biz.constant.BaseConstant;
+import com.yyh.base.util.LocalThreadContext;
+import com.yyh.base.util.constant.BaseConstant;
 
 /**
  * 当前请求线程调用链token转换器

@@ -1,4 +1,4 @@
-package com.yyh.base.biz;
+package com.yyh.base.util;
 
 import java.util.HashMap;
 import java.util.List;

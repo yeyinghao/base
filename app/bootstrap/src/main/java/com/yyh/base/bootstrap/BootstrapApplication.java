@@ -1,4 +1,4 @@
-package com.yyh.base.biz;
+package com.yyh.base.bootstrap;
 
 import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
 import org.mybatis.spring.annotation.MapperScan;
