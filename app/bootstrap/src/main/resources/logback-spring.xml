@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
-	<contextName>base</contextName>
+
+	<contextName>logback</contextName>
+	<property name="LOG_PATH" value="logs" />
 	<conversionRule conversionWord="token" converterClass="com.yyh.base.biz.log.LogThreadTokenConvert" />
 	<conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
 
