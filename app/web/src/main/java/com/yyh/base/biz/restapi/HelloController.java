@@ -11,6 +11,6 @@ public class HelloController {
 
 	@GetMapping("/hello")
 	public void hello() {
-		logger.info("请求成功了");
+		logger.warn("请求成功了");
 	}
 }

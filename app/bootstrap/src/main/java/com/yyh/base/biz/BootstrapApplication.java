@@ -25,7 +25,7 @@ public class BootstrapApplication {
 	public static void main(String[] args) {
 		try {
 			SpringApplication.run(BootstrapApplication.class, args);
-			logger.info("启动成功");
+			logger.warn("启动成功");
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

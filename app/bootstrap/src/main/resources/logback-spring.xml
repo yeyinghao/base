@@ -2,14 +2,20 @@
 <configuration debug="false">
 
 	<contextName>logback</contextName>
-	<property name="LOG_PATH" value="logs" />
+	<property name="log.path" value="./logs" />
 	<conversionRule conversionWord="token" converterClass="com.yyh.base.biz.log.LogThreadTokenConvert" />
 	<conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
 
-	<!-- 控制台输出 -->
+	<!--输出到控制台-->
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<!--此日志appender是为开发使用，只配置最底级别，控制台输出的日志级别是大于或等于此级别的日志信息-->
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>info</level>
+		</filter>
 		<encoder>
 			<pattern>%clr([%token]) %d{YY-MM-dd HH:mm:ss.SSS} %clr(%-5level) %logger{32}[%line] - %clr(%msg) %n</pattern>
+			<!-- 设置字符集 -->
+			<charset>UTF-8</charset>
 		</encoder>
 	</appender>
 
@@ -20,12 +26,12 @@
 			<onMatch>ACCEPT</onMatch>
 			<onMismatch>DENY</onMismatch>
 		</filter>
-		<file>${LOG_PATH}/debug.log</file>
+		<file>${log.path}/default/debug.log</file>
 		<!-- 设置滚动策略 -->
 		<!-- 按天来回滚，如果需要按小时来回滚，则设置为{yyyy-MM-dd_HH} -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--设置日志命名模式 -->
-			<fileNamePattern>${LOG_PATH}/debug.log.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<fileNamePattern>${log.path}/default/debug.log.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 			<!-- 如果按天来回滚，则最大保存时间为60天，60天之前的都将被清理掉 这里的值与滚动策略模式有关 -->
 			<maxHistory>60</maxHistory>
 			<!-- 按照日期进行归档，并且对日志文件大小进行限制 -->
@@ -46,9 +52,9 @@
 			<onMatch>ACCEPT</onMatch>
 			<onMismatch>DENY</onMismatch>
 		</filter>
-		<file>${LOG_PATH}/info.log</file>
+		<file>${log.path}/default/info.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${LOG_PATH}/info.log.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<fileNamePattern>${log.path}/default/info.log.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 			<maxHistory>60</maxHistory>
 			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>10MB</maxFileSize>
@@ -64,9 +70,9 @@
 			<onMatch>ACCEPT</onMatch>
 			<onMismatch>DENY</onMismatch>
 		</filter>
-		<file>${LOG_PATH}/warn.log</file>
+		<file>${log.path}/default/warn.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${LOG_PATH}/warn.log.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<fileNamePattern>${log.path}/default/warn.log.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 			<maxHistory>60</maxHistory>
 			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>10MB</maxFileSize>
@@ -82,9 +88,9 @@
 			<onMatch>ACCEPT</onMatch>
 			<onMismatch>DENY</onMismatch>
 		</filter>
-		<file>${LOG_PATH}/error.log</file>
+		<file>${log.path}/default/error.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${LOG_PATH}/error.log.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<fileNamePattern>${log.path}/default/error.log.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 			<maxHistory>60</maxHistory>
 			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>10MB</maxFileSize>
@@ -97,27 +103,9 @@
 
 	<root level="info">
 		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="DEBUG_FILE" />
 		<appender-ref ref="INFO_FILE" />
 		<appender-ref ref="WARN_FILE" />
 		<appender-ref ref="ERROR_FILE" />
 	</root>
-
-	<springProfile name="dev,test">
-		<logger name="com.yyh.code.base" level="debug" additivity="false">
-			<appender-ref ref="CONSOLE" />
-			<appender-ref ref="DEBUG_FILE" />
-			<appender-ref ref="INFO_FILE" />
-			<appender-ref ref="WARN_FILE" />
-			<appender-ref ref="ERROR_FILE" />
-		</logger>
-	</springProfile>
-
-	<springProfile name="prod">
-		<logger name="com.yyh.code.base" level="info" additivity="false">
-			<appender-ref ref="CONSOLE" />
-			<appender-ref ref="INFO_FILE" />
-			<appender-ref ref="WARN_FILE" />
-			<appender-ref ref="ERROR_FILE" />
-		</logger>
-	</springProfile>
 </configuration>
