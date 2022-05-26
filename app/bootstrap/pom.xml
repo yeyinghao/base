@@ -30,7 +30,7 @@
 
 		<dependency>
 			<groupId>com.yyh.code</groupId>
-			<artifactId>util</artifactId>
+			<artifactId>impl</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 

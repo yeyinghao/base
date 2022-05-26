@@ -16,4 +16,11 @@
 	<name>service</name>
 	<description>service</description>
 
+	<dependencies>
+		<dependency>
+			<groupId>com.yyh.code</groupId>
+			<artifactId>model</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>
