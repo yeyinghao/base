@@ -1,5 +1,7 @@
 package com.yyh.base.web.restapi;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.yyh.base.dal.entity.User;
 import com.yyh.base.dal.mapper.UserMapper;
 import org.slf4j.Logger;
@@ -21,7 +23,10 @@ public class HelloController {
 
 	@GetMapping("/hello")
 	public void hello() {
-		List<User> users = userMapper.selectByMap(new HashMap<>());
+		Page<List<User>> objects = PageHelper.startPage(1, 1);
+
+		 userMapper.selectByMap(new HashMap<>());
+		objects.getTotal();
 		logger.warn("请求成功了");
 	}
 }
