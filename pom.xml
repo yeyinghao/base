@@ -4,6 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.7.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
 	<packaging>pom</packaging>
 
 	<modules>
@@ -93,16 +100,6 @@
 				<artifactId>mybatis-plus-boot-starter</artifactId>
 				<version>3.5.1</version>
 			</dependency>
-			<dependency>
-				<groupId>com.baomidou</groupId>
-				<artifactId>mybatis-plus-generator</artifactId>
-				<version>3.5.1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.freemarker</groupId>
-				<artifactId>freemarker</artifactId>
-				<version>2.3.28</version>
-			</dependency>
 			<!-- mybatis plus 代码生成器 end -->
 			<!--	fastjson	-->
 			<dependency>
@@ -110,17 +107,19 @@
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
 			</dependency>
+
 			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid</artifactId>
-				<version>1.1.23</version>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-jdbc</artifactId>
+				<version>${spring-boot.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-jdbc</artifactId>
-				<version>5.2.9.RELEASE</version>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper-spring-boot-starter</artifactId>
+				<version>1.3.1</version>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 

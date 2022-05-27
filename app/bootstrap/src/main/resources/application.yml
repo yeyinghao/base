@@ -3,6 +3,7 @@ spring:
     name: base
   profiles:
     active: dev
+
 ---
 #开发环境配置
 nacos:
