@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 
@@ -15,8 +16,9 @@ import java.util.List;
 public class HelloController {
 	private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
-	@Autowired
+	@Resource
 	private UserMapper userMapper;
+
 	@GetMapping("/hello")
 	public void hello() {
 		List<User> users = userMapper.selectByMap(new HashMap<>());
