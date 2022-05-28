@@ -16,8 +16,8 @@ import org.springframework.context.annotation.ComponentScan;
  * @date: 2022/5/24 21:54
  * @description: BootstrapApplication.java
  */
-@ComponentScan(basePackages = "com.yyh.base")
-@MapperScan("com.yyh.base.dal.mapper")
+@ComponentScan(basePackages = "com.yyh.code")
+@MapperScan("com.yyh.code.dal.mapper")
 @NacosPropertySource(dataId = "base.yml", autoRefreshed = true)
 @SpringBootApplication
 public class BootstrapApplication {
