@@ -1,4 +1,4 @@
-package com.yyh.code.test.jasypt;
+package com.yyh.code.jasypt;
 
 import org.jasypt.util.text.BasicTextEncryptor;
 

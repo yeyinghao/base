@@ -1,4 +1,4 @@
-package com.yyh.code.test;
+package com.yyh.code;
 
 import com.yyh.code.bootstrap.BootstrapApplication;
 import org.junit.After;

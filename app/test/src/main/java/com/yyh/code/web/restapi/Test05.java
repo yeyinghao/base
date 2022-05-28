@@ -1,7 +1,7 @@
-package com.yyh.code.test.controller;
+package com.yyh.code.web.restapi;
 
+import com.yyh.code.BaseTest;
 import com.yyh.code.dal.mapper.UserMapper;
-import com.yyh.code.test.BaseTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

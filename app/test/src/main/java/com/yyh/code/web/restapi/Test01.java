@@ -1,6 +1,6 @@
-package com.yyh.code.test.controller;
+package com.yyh.code.web.restapi;
 
-import com.yyh.code.test.BaseTest;
+import com.yyh.code.BaseTest;
 import org.junit.Test;
 
 public class Test01 extends BaseTest {
