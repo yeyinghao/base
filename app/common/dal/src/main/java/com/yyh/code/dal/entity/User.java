@@ -1,4 +1,4 @@
-package com.yyh.base.dal.entity;
+package com.yyh.code.dal.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;

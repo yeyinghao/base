@@ -3,7 +3,7 @@
 
 	<contextName>logback</contextName>
 	<property name="log.path" value="./logs"/>
-	<conversionRule conversionWord="token" converterClass="com.yyh.base.bootstrap.log.LogThreadTokenConvert"/>
+	<conversionRule conversionWord="token" converterClass="com.yyh.code.bootstrap.log.LogThreadTokenConvert"/>
 	<conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
 
 	<!--输出到控制台-->

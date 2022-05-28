@@ -1,7 +1,7 @@
-package com.yyh.base.bootstrap.log;
+package com.yyh.code.bootstrap.log;
 
 import ch.qos.logback.classic.PatternLayout;
-import com.yyh.base.util.constant.BaseConstant;
+import com.yyh.code.util.constant.BaseConstant;
 
 /**
  * 日志装饰类，加入全局调用链唯一号
